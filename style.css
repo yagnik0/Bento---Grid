@@ -47,9 +47,9 @@ img {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.item:hover {
-    transform: scale(1.03);
-}
+/* .item:hover {
+    transform: scale(1);
+} */
 
 /*  Box 1 styling */
 
@@ -172,14 +172,12 @@ img {
     font-size: 3.2rem;
 }
 
-
-
 /* Box 7 Styling */
 
 .box-7{
     padding: 2.5rem;
     grid-column: 2/3;
-    transform: translateY(-80px);
+    transform: translateY(-89px);
 }
 
 .box-7-head{
@@ -206,7 +204,7 @@ img {
     padding: 2.5rem;
     background: var(--dark-purple);
     grid-column:  span 2;
-    transform: translateY(-80px);
+    transform: translateY(-89px);
 }
 
 .box-8-head {
