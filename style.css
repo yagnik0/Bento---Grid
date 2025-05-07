@@ -7,23 +7,29 @@
 }
 
 :root {
-  /* Colors */
-
   --dark-purple: hsl(256, 67%, 59%);
   --light-purple: hsl(254, 88%, 90%);
   --dark-yellow: hsl(39, 100%, 71%);
   --light-yellow: hsl(31, 66%, 93%);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 7%);
-
-  /* Spacing */
-
-
+}
 
 body {
   font-family: "DM Sans", sans-serif;
   background-color: var(--white);
-  font-size: var(--fs-1);
+  color: var(--black);
+  font-size: 62.5%;
+  line-height: 1.5;
+  margin: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--heading-color, inherit);
+  font-size: var(--heading-font-size, 2.4rem);
+  line-height: 1.1;
 }
 
 img {
@@ -31,212 +37,25 @@ img {
   display: block;
 }
 
-.container {
+.bento-grid {
   display: grid;
-  place-content: center;
-  min-height: 100vh;
+  gap: 2.2rem;
 }
 
-.grid-container {
-  width: 90%;
-  margin: 6.5rem auto;
-  max-width: 140rem;
-  display: grid;
-  gap: 2rem;
-
-  grid-template-areas:
-    "social"
-    "multiple"
-    "consistent"
-    "timing"
-    "followers"
-    "growth"
-    "schedule"
-    "content";
+.bento-grid > * {
+  color: var(--bento-card-foreground, var(--black));
+  background-color: var(--bento-card-surface, var(--white));
+  padding: var(--bento-card-padding, 3rem);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: var(--bento-card-border-radius, 1.4rem);
+  span {
+    color: var(---heading-span, var(--dark-yellow))
+  }
 }
 
-.item {
-  border-radius: 0.8rem;
-  font-size: 1.8rem;
-  transition: transform 0.3s;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
+.bento-grid > :nth-child(1) {
+  --bento-card-foreground: var(--white);
+  --bento-card-surface: var(--dark-purple);
+  --heading-font-size : 3.2rem;
 
-.item:hover {
-    transform: scale(1.05);
-}
-
-.schedule {
-  grid-area: schedule;
-}
-
-.social {
-  grid-area: social;
-}
-
-.timing {
-  grid-area: timing;
-}
-
-.content {
-  grid-area: content;
-}
-
-.multiple {
-  grid-area: multiple;
-}
-
-.growth {
-  grid-area: growth;
-}
-
-.consistency {
-  grid-area: consistency;
-}
-
-.followers {
-  grid-area: followers;
-}
-
-/*  Box 1 styling */
-
-.box-1 {
-  background: var(--light-yellow);
-  letter-spacing: -1.6px;
-  line-height: 36px;
-  padding: 3.4rem;
-}
-
-.box-1-head {
-  font-size: 3.8rem;
-  margin-bottom: 2.4rem;
-  font-weight: 500;
-}
-
-.box-1 i {
-  color: var(--dark-purple);
-}
-
-/* Box 2 Styling */
-
-.box-2 {
-  background: var(--dark-purple);
-  padding: 6.2rem 4.2rem;
-  text-align: center;
-  color: #fff;
-}
-
-.box-2-head {
-  font-size: 5.2rem;
-  margin-bottom: 2.5rem;
-  font-weight: 500;
-}
-
-.box-2 img {
-  /* max-width: 200px; */
-}
-
-.box-2-para {
-  margin-top: 0.9rem;
-  font-weight: 400;
-}
-
-/* Box 3 Styling */
-
-.box-3 {
-  padding: 5rem 0 5rem 3.4rem;
-  background: var(--light-purple);
-  line-height: 0.9;
-  overflow-x: hidden;
-}
-
-.box-3-head {
-  font-size: 3rem;
-  font-weight: 500;
-  margin-bottom: 2.5rem;
-}
-
-/* .box-3 img{
-    max-width: 375px;
-} */
-
-.box-3-para {
-  font-weight: 400;
-  margin-top: 2.5rem;
-}
-
-/* Box 4 Styling */
-
-.box-4 {
-  background: var(--dark-yellow);
-  padding: 2.5rem;
-}
-
-.box-4-head {
-  font-weight: 500;
-  font-size: 3.5rem;
-  margin-bottom: 5.6rem;
-  line-height: 0.9;
-}
-
-/* Box 5 Styling */
-
-.box-5 {
-  padding: 2.4rem 0 2.4rem 2.4rem;
-}
-
-.box-5-head {
-  font-weight: 500;
-  font-size: 3.3rem;
-  line-height: 0.9;
-}
-
-/* Box 6 Styling */
-
-.box-6 {
-  padding: 2.5rem;
-  line-height: 0.9;
-  background: var(--dark-yellow);
-  /* max-height: 246px;
-    overflow-y: hidden; */
-}
-
-.box-6-head {
-  font-weight: 500;
-  margin-bottom: 1.6rem;
-  font-size: 3.2rem;
-}
-
-/* Box 7 Styling */
-
-.box-7 {
-  padding: 2.5rem;
-}
-
-.box-7-head {
-  font-size: 7rem;
-  font-weight: 500;
-}
-
-.box-7-para {
-  font-weight: 400;
-  margin: 1.7rem 0;
-}
-
-/* Box 8 Styling */
-
-.box-8 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.3rem;
-  padding: 2.5rem;
-  background: var(--dark-purple);
-}
-
-.box-8-head {
-  color: #fff;
-  font-weight: 500;
-  font-size: 4rem;
-  line-height: 0.9;
 }
